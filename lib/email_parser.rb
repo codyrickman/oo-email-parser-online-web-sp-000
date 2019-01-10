@@ -8,7 +8,7 @@ class EmailParser
     @emails = emails
   end
   def parse
-    parsed = @emails.split(',')
+    parsed = @emails.split(/,\s/)
     email_list =[]
     parsed.each {|email| email_list << email.strip}
     return email_list.uniq
