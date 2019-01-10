@@ -8,7 +8,10 @@ class EmailParser
     @emails = emails
   end
   def parse
-    if (@emails.include?(","))
+    if (@emails.include?(",") && @emails.include?(" "))
+      @emails = @emails.gsub(" ", ",")
+      parsed = @emails.split(",")
+    elsif (@emails.include?(","))
       parsed = @emails.split(",")
     elsif (@emails.include?(" "))
       parsed = @emails.split
