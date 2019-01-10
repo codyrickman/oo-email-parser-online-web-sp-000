@@ -5,11 +5,13 @@
 class EmailParser
   attr_accessor :emails
   def initialize(emails)
-    @emails = emails.strip
+    @emails = emails
   end
   def parse
     parsed = @emails.split(',')
-    return parsed
+    email_list =[]
+    parsed.each {|email| email_list << email.strip}
+    return email_list
   end
 
 end
