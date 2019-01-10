@@ -11,7 +11,7 @@ class EmailParser
     parsed = @emails.split(',')
     email_list =[]
     parsed.each {|email| email_list << email.strip}
-    return email_list
+    return email_list.uniq
   end
 
 end
