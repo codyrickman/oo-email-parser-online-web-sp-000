@@ -5,10 +5,9 @@
 class EmailParser
   attr_accessor :emails
   def initialize(emails)
-    @emails = emails
+    @emails = emails.strip
   end
   def parse
-    @emails.strip!
     parsed = @emails.split(',')
     return parsed
   end
