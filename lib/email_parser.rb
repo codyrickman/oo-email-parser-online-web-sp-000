@@ -18,6 +18,7 @@ class EmailParser
     end
     email_list =[]
     parsed.each {|email| email_list << email.strip}
+    email_list.delete("")
     return email_list.uniq
   end
 
