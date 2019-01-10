@@ -11,7 +11,7 @@ class EmailParser
     if (@emails.include?(","))
       parsed = @emails.split(",")
     elsif (@emails.include?(" "))
-      parsed = parsed.split
+      parsed = @emails.split
     end
     email_list =[]
     parsed.each {|email| email_list << email.strip}
